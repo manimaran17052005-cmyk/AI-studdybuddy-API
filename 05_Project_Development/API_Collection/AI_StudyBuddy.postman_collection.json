@@ -1,0 +1,39 @@
+{
+  "info": {
+    "name": "AI StudyBuddy API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "http://127.0.0.1:8000/health"
+      }
+    },
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Student\",\"email\":\"student@example.com\",\"password\":\"Password123\"}"
+        },
+        "url": "http://127.0.0.1:8000/auth/register"
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"student@example.com\",\"password\":\"Password123\"}"
+        },
+        "url": "http://127.0.0.1:8000/auth/login"
+      }
+    }
+  ]
+}
