@@ -1,0 +1,35 @@
+{
+  "name": "ai-studybuddy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "promote-admin": "node scripts/promote-admin.js",
+    "test": "node -e \"const { execSync } = require('node:child_process'); ['index.js','scripts/promote-admin.js','src/controllers/authController.js','src/controllers/materialController.js','src/controllers/adminController.js','src/middleware/auth.js','src/middleware/upload.js','src/models/User.js','src/models/Material.js','src/routes/auth.js','src/routes/materials.js','src/routes/admin.js','src/utils/db.js','src/utils/gemini.js','src/utils/tokens.js'].forEach((file) => execSync('node --check ' + file, { stdio: 'inherit' })); console.log('syntax-ok');\" --"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^4.22.2",
+    "express-async-errors": "^3.1.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb-memory-server": "^10.2.0",
+    "mongoose": "^9.7.2",
+    "multer": "^2.2.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "allowScripts": {
+    "mongodb-memory-server@10.4.3": true
+  }
+}
